@@ -1,0 +1,29 @@
+# --spring.config.location=classpath:application_dev.yml
+
+spring:
+    datasource:
+        #url: jdbc:postgresql://localhost:5432/bakery
+        url: jdbc:postgresql://localhost:5432/Bakery
+        username: postgres
+        password: postgresql
+    jpa:
+        hibernate:
+            ddl-auto: validate
+        show-sql: true
+        generate-ddl: true
+    session:
+        jdbc:
+            initialize-schema: always
+            table-name: SPRING_SESSION        
+bakery:
+    title: my bakery
+    
+upload:
+    #path: img
+    path: src\\main\\resources\\static\\img
+    
+server:
+    port: 8888
+    error:
+        path: /error
+    

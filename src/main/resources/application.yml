@@ -1,0 +1,28 @@
+spring:
+    datasource:
+        url: jdbc:postgresql://localhost:5432/bakery
+        username: postgres
+        password: postgresql
+    jpa:
+        hibernate:
+            ddl-auto: validate
+        show-sql: false
+        generate-ddl: true
+    session:
+        jdbc:
+            initialize-schema: always
+            table-name: SPRING_SESSION
+    flyway:
+        enabled: true
+        baseline-on-migrate: true        
+bakery:
+    title: my bakery
+    
+upload:
+    path: img
+    #path: src\\main\\resources\\static\\images
+    
+server:
+    port: 8888
+    error:
+        path: /error
